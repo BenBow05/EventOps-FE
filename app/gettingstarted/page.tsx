@@ -1,9 +1,9 @@
 //LANDING PAGE AKA HOMESCREEN
 export default function GettingStarted() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#EFEFEF] font-sans text-black">
-      <div className="grid h-screen w-screen grid-cols-3 grid-rows-10 gap-3">
-        <div className="flex w-screen items-center justify-between">
+    <div className="flex h-full w-full items-center justify-center bg-[#EFEFEF] font-sans text-black">
+      <div className="grid h-full w-full grid-cols-3 grid-rows-10 gap-3">
+        <div className="col-span-3 flex w-full items-center justify-between">
           <div className="group mt-5 ml-5 flex items-center">
             <svg
               width="45"
