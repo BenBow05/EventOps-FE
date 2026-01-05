@@ -1,5 +1,5 @@
 "use client";
-import { ArrowLeftIcon, ArrowRightIcon, HamburgerMenuIcon, HomeIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon, ArrowRightIcon, HamburgerMenuIcon, HomeIcon, RocketIcon } from "@radix-ui/react-icons";
 import { Button } from "@radix-ui/themes";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -15,25 +15,25 @@ export default function NavBar(){
   const sideList = [
     {
       icon: <HomeIcon className="text-2xl" />,
-      title: "item 1",
+      title: "Temp Dashboard",
+      link: "/dashboard"
     },
     {
       icon: <HomeIcon className="text-2xl" />,
-      title: "item 2",
+      title: "Location Search",
+      link: "/locationsearch"
     },
     {
       icon: <HomeIcon className="text-2xl" />,
-      title: "item 3",
+      title: "Temp Sign up",
+      link: "/signup"
     },
     {
-      icon: <HomeIcon className="text-2xl" />,
-      title: "item 4",
+      icon: <RocketIcon className="text-2xl" />,
+      title: "Getting Started",
+      link: "/gettingstarted"
     },
   ];
-
-  const handleDrawer = () => {
-    setIsOpen(!isOpen);
-  };
 
   useEffect(() => {
     const handleEscKeyPress = (e: { keyCode: number; }) => {
@@ -41,7 +41,6 @@ export default function NavBar(){
         setIsOpen(false);
       }
     };
-
     if (isOpen) {
       document.body.style.setProperty("overflow", "hidden");
     } else {
@@ -58,41 +57,46 @@ export default function NavBar(){
   return (
     <aside
       className={`
-        h-full bg-white border-r
-        transition-all duration-300 ease-in-out
+        h-full bg-primary border-r
+        transition-all duration-300 ease-in-out flex flex-col
         ${isOpen ? "w-64" : "w-16"}
       `}
     >
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b">
+      <div className="flex items-center justify-center border-b">
         {isOpen && (
-          <img
+          <Link href={"/"}>
+            <img
             src="https://i.imgur.com/520zDfd.png"
             alt="Logo"
-            className="w-28"
+            className="w-50"
           />
-        )}
-
-        <Button
-          variant="ghost"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-            {isOpen ? <ArrowLeftIcon /> : <ArrowRightIcon />}
-        </Button>
+          </Link>
+          
+         )}
       </div>
 
       {/* Menu */}
-      <nav >
-        {sideList.map(({ icon, title }, i) => (
-          <div
-            key={i}
-            className="flex items-center gap-3 p-4 hover:bg-pink-500 hover:text-white"
-          >
-            {icon}
-            {isOpen && <span>{title}</span>}
-          </div>
+      <nav className="flex-1">
+        {sideList.map(({ icon, title, link }, i) => (
+          <Link key={i} href={link}>
+            <div className="flex items-center gap-3 p-4 hover:bg-accent hover:text-white">
+                {icon}
+                {isOpen && <span>{title}</span>}
+            </div>
+          </Link>
         ))}
       </nav>
+      <div className={`flex ${isOpen ? "justify-end" : "justify-center"} p-4`}>
+          <Button
+          variant="ghost"
+          onClick={() => setIsOpen(!isOpen)}
+          size="3"
+          radius="large"
+        >
+            {isOpen ? <ArrowLeftIcon color={"black"} width={24} height={24} /> : <ArrowRightIcon color={"black"} width={24} height={24} />}
+        </Button>
+      </div>
     </aside>
   );
 }
