@@ -35,7 +35,7 @@ export default function SignUp() {
         </h1>
       </div>
       <div className="col-start-2 row-start-2 m-auto w-100 items-center">
-        <Card variant="surface">
+        <Card variant="surface" className="bg-primary">
           <Form.Root className="grid grid-rows-4 gap-10 pr-5 pl-5 text-center">
             <div className="m-auto flex items-center align-middle">
               <h1 className="text-2xl font-bold">Sign Up</h1>

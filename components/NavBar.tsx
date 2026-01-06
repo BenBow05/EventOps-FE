@@ -80,7 +80,7 @@ export default function NavBar(){
       <nav className="flex-1">
         {sideList.map(({ icon, title, link }, i) => (
           <Link key={i} href={link}>
-            <div className="flex items-center gap-3 p-4 hover:bg-accent hover:text-white">
+            <div className={`flex ${isOpen ? "gap-3" : "justify-center"} p-4 hover:bg-accent hover:text-white`}>
                 {icon}
                 {isOpen && <span>{title}</span>}
             </div>
