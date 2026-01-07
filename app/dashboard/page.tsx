@@ -40,6 +40,7 @@ export default function Dashboard() {
         </button>
       </div>
       <div>
+        <hr className="m-auto mt-5 mb-5 h-1 w-9/10 rounded-full border-transparent bg-black" />
         {state == "upcoming" && <EventList />}
         {state === "manage" && <Manage />}
         {state === "notifs" && <Notifs />}

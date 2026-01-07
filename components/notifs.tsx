@@ -1,56 +1,55 @@
-import { Button, Table } from "@radix-ui/themes";
-import * as Tooltip from "@radix-ui/react-tooltip";
-import {
-  BellIcon,
-  Cross1Icon,
-  Cross2Icon,
-  EnvelopeClosedIcon,
-} from "@radix-ui/react-icons";
+import { Table } from "@radix-ui/themes";
+import NotifEntry from "./notifEntry";
+import { useState } from "react";
 
 export default function Notifs() {
+  const [notifs, setNotifs] = useState([
+    {
+      id: 1,
+      header: "backend",
+      desc: "where backendvwhere backendwhere backendwhere ",
+      date: new Date(),
+      read: false,
+    },
+    {
+      id: 2,
+      header: "backend",
+      desc: "where backend",
+      date: new Date(),
+      read: false,
+    },
+    {
+      id: 3,
+      header: "backend",
+      desc: "where backend",
+      date: new Date(),
+      read: false,
+    },
+  ]);
+
+  const markAsRead = (id: number) => {
+    setNotifs((prevNotifs) =>
+      prevNotifs.map((notif) =>
+        notif.id === id ? { ...notif, read: !notif.read } : notif,
+      ),
+    );
+  };
+
   return (
     <div className="m-auto">
-      <Table.Root className="m-auto w-9/10">
-        <Table.Header>
+      <Table.Root variant="surface" className="m-auto w-9/10">
+        <Table.Header className="text-lg">
           <Table.Row>
             <Table.ColumnHeaderCell>Header</Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell>Description</Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell>Actions</Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell>Timestamp</Table.ColumnHeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          <Tooltip.Provider>
-            <Table.Row>
-              <Table.RowHeaderCell>Danilo Sousa</Table.RowHeaderCell>
-              <Table.Cell>danilo@example.com</Table.Cell>
-              <Table.Cell className="flex items-center gap-2">
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <Button>
-                      <EnvelopeClosedIcon width="15" height="15" />
-                    </Button>
-                  </Tooltip.Trigger>
-                  <Tooltip.Content>Mark as read</Tooltip.Content>
-                </Tooltip.Root>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <Button>
-                      <BellIcon width="15" height="15" />
-                    </Button>
-                  </Tooltip.Trigger>
-                  <Tooltip.Content>Remind</Tooltip.Content>
-                </Tooltip.Root>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <Button>
-                      <Cross1Icon width="15" height="15" />
-                    </Button>
-                  </Tooltip.Trigger>
-                  <Tooltip.Content>Delete</Tooltip.Content>
-                </Tooltip.Root>
-              </Table.Cell>
-            </Table.Row>
-          </Tooltip.Provider>
+          {notifs.map((notif) => (
+            <NotifEntry key={notif.id} {...notif} markAsRead={markAsRead} />
+          ))}
         </Table.Body>
       </Table.Root>
     </div>
