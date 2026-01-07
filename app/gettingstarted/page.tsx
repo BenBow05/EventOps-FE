@@ -59,7 +59,7 @@ export default function GettingStarted() {
           <span className="group-hover:bg-linear-[25deg,#4FBBC9,#8869D1] group-hover:bg-clip-text group-hover:text-transparent">
             The Ultimate Event Management App.
           </span>
-          <hr className="mt-1 h-1 scale-x-0 border-transparent bg-linear-[25deg,#4FBBC9,#8869D1] transition-transform group-hover:scale-x-100"></hr>
+          <hr className="mt-1 h-1 scale-x-0 rounded-full border-transparent bg-linear-[25deg,#4FBBC9,#8869D1] transition-transform group-hover:scale-x-100" />
         </div>
         <div className="group row-start-4 row-end-10 mr-auto ml-auto w-3/4 rounded-sm bg-[#4FBBC9] p-5 text-center shadow-[-10px_10px_0px_0px_#8869D1]">
           <ArrowRightIcon
