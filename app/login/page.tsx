@@ -71,7 +71,10 @@ export default function LogIn() {
               <Form.Control asChild>
                 <PasswordToggleField.Root>
                   <div className="flex h-9 flex-nowrap items-center justify-center gap-2 rounded-sm px-3 pr-2.25 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.1)] focus-within:shadow-[0_0_0_2px_black] hover:shadow-[0_0_0_1px_black]">
-                    <PasswordToggleField.Input className="h-4.5 flex-1 border-none bg-transparent text-sm leading-none text-inherit outline-none selection:bg-black/20 selection:text-black" />
+                    <PasswordToggleField.Input
+                      placeholder="Enter your password"
+                      className="h-4.5 flex-1 border-none bg-transparent text-sm leading-none text-inherit outline-none selection:bg-black/20 selection:text-black"
+                    />
                     <PasswordToggleField.Toggle className="flex aspect-square h-4.5 items-center justify-center rounded text-sm leading-none text-inherit outline-none focus-visible:outline-0 focus-visible:outline-offset-0">
                       <PasswordToggleField.Icon
                         visible={<EyeOpenIcon />}
