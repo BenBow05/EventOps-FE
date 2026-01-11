@@ -35,6 +35,10 @@ export default function Notifs() {
     );
   };
 
+  const deleteNotif = (id: number) => {
+    setNotifs((prevNotifs) => prevNotifs.filter((notif) => notif.id !== id));
+  };
+
   return (
     <div className="m-auto">
       <Table.Root variant="surface" className="m-auto w-9/10">
@@ -48,7 +52,12 @@ export default function Notifs() {
         </Table.Header>
         <Table.Body>
           {notifs.map((notif) => (
-            <NotifEntry key={notif.id} {...notif} markAsRead={markAsRead} />
+            <NotifEntry
+              key={notif.id}
+              {...notif}
+              markAsRead={markAsRead}
+              delete={deleteNotif}
+            />
           ))}
         </Table.Body>
       </Table.Root>

@@ -13,6 +13,7 @@ type notifProps = {
   date: Date;
   read: boolean;
   markAsRead: (id: number) => void;
+  delete: (id: number) => void;
 };
 
 export default function NotifEntry(props: notifProps) {
@@ -52,6 +53,7 @@ export default function NotifEntry(props: notifProps) {
           <Button
             variant="surface"
             style={{ width: "36px", height: "36px", padding: "0" }}
+            onClick={() => props.delete(props.id)}
           >
             <Cross1Icon width="15" height="15" />
           </Button>
