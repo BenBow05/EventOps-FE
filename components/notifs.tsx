@@ -40,8 +40,8 @@ export default function Notifs() {
   };
 
   return (
-    <div className="m-auto">
-      <Table.Root variant="surface" className="m-auto w-9/10">
+    <div className="mt-5 mr-auto ml-auto w-9/10">
+      <Table.Root variant="surface">
         <Table.Header className="text-lg">
           <Table.Row>
             <Table.ColumnHeaderCell>Header</Table.ColumnHeaderCell>
@@ -61,6 +61,9 @@ export default function Notifs() {
           ))}
         </Table.Body>
       </Table.Root>
+      {notifs.length === 0 && (
+        <p className="m-auto mt-5 w-fit">No notifications.</p>
+      )}
     </div>
   );
 }
