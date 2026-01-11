@@ -1,13 +1,13 @@
-import { useState } from "react";
 import EventCard from "./eventCard";
 
-export default function EventList() {
-  const [events, setEvents] = useState([
-    { id: 1, name: "test", desc: "a test event", date: new Date() },
-  ]);
+type eventProps = {
+  events: { id: number; name: string; desc: string; date: Date }[];
+};
+
+export default function EventList(props: eventProps) {
   return (
     <div className="m-auto grid h-fit w-fit grid-cols-3 gap-5 align-middle">
-      {events.map((event) => (
+      {props.events.map((event) => (
         <EventCard
           key={event.id}
           name={event.name}
