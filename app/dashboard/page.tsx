@@ -9,9 +9,9 @@ import { useState } from "react";
 export default function Dashboard() {
   const [state, setState] = useState<string>("upcoming");
   return (
-    <div className="m-auto w-full">
-      <div className="mb-5 flex items-center justify-between align-middle">
-        <h1 className="mt-5 ml-5 text-6xl font-bold">Dashboard</h1>
+    <div className="m-auto h-full w-full">
+      <div className="flex h-1/10 items-center justify-between align-middle">
+        <h1 className="ml-5 text-6xl font-bold">Dashboard</h1>
         <SegmentedControl.Root
           value={state}
           onValueChange={setState}
@@ -30,7 +30,7 @@ export default function Dashboard() {
             Notifications
           </SegmentedControl.Item>
         </SegmentedControl.Root>
-        <button className="group mt-5 mr-5 rounded-4xl bg-linear-[25deg,#4FBBC9,#8869D1] p-3 transition-transform duration-500 hover:rotate-180">
+        <button className="group mr-5 rounded-4xl bg-linear-[25deg,#4FBBC9,#8869D1] p-3 transition-transform duration-500 hover:rotate-180">
           <PersonIcon
             className="duration-500 group-hover:-rotate-180"
             color="white"
@@ -39,8 +39,8 @@ export default function Dashboard() {
           />
         </button>
       </div>
-      <div>
-        <hr className="m-auto mt-5 mb-5 h-1 w-9/10 rounded-full border-transparent bg-black" />
+      {/* <hr className="m-auto h-1 w-9/10 rounded-full border-transparent bg-black" /> */}
+      <div className="flex h-9/10">
         {state == "upcoming" && <EventList />}
         {state === "manage" && <Manage />}
         {state === "notifs" && <Notifs />}
