@@ -52,6 +52,14 @@ export default function CreateEventModal() {
             [DATE SELECTOR]
           </p>
         </fieldset>
+        <fieldset className="mb-3.75 flex items-center gap-5">
+          <label className="w-22.5 text-right text-[15px]" htmlFor="date">
+            Venue
+          </label>
+          <p className="inline-flex h-8.75 w-full flex-1 items-center justify-center rounded px-2.5 text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]">
+            [LOCATION SELECTOR]
+          </p>
+        </fieldset>
         <div className="mt-6.25 flex justify-end">
           <Dialog.Close>
             <div className="flex gap-2">
