@@ -1,4 +1,3 @@
-import { Pencil1Icon } from "@radix-ui/react-icons";
 import { Card, Inset } from "@radix-ui/themes";
 import ManageGuestsModal from "./manageGuestsModal";
 import CreateEventModal from "./createEventModal";
