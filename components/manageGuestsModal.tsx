@@ -1,5 +1,5 @@
 import { Cross2Icon, PaperPlaneIcon } from "@radix-ui/react-icons";
-import { Dialog } from "@radix-ui/themes";
+import { Badge, Dialog } from "@radix-ui/themes";
 
 export default function ManageGuestsModal() {
   return (
@@ -23,6 +23,20 @@ export default function ManageGuestsModal() {
         {/* <Dialog.Description className="mt-2.5 mb-5 text-[15px] leading-normal">
               Enter Details
             </Dialog.Description> */}
+        <div className="m-auto grid grid-cols-3 text-center">
+          <div className="mb-5">
+            <h1>Accepted</h1>
+            <Badge color="green">clove@riot.co</Badge>
+          </div>
+          <div>
+            <h1>Pending</h1>
+            <Badge color="yellow">omen@riot.co</Badge>
+          </div>
+          <div>
+            <h1>Declined</h1>
+            <Badge color="red">gekko@riot.co</Badge>
+          </div>
+        </div>
         <fieldset className="mb-3.75 flex items-center gap-5">
           <label className="w-22.5 text-right text-[15px]" htmlFor="name">
             Guest List
