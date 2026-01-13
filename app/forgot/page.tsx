@@ -3,7 +3,7 @@ import { Card } from "@radix-ui/themes";
 import { unstable_PasswordToggleField as PasswordToggleField } from "radix-ui";
 import { EyeClosedIcon, EyeOpenIcon } from "@radix-ui/react-icons";
 
-export default function LogIn() {
+export default function forgotPassword() {
   return (
     <div className="grid h-full w-full grid-cols-3 grid-rows-5">
       <div className="group col-start-2 m-auto mt-5 flex items-center text-center">
@@ -38,7 +38,7 @@ export default function LogIn() {
         <Card variant="surface" className="bg-primary">
           <Form.Root className="grid grid-rows-3 gap-10 p-10 text-center">
             <div className="m-auto flex items-center align-middle">
-              <h1 className="text-2xl font-bold">Login</h1>
+              <h1 className="text-2xl font-bold">Forgot Password</h1>
             </div>
             <Form.Field className="FormField" name="email">
               <div className="mb-2">
@@ -61,41 +61,17 @@ export default function LogIn() {
                 </div>
               </Form.Control>
             </Form.Field>
-            <Form.Field className="FormField" name="question">
-              <div className="mb-2">
-                <Form.Label>Password</Form.Label>
-                <Form.Message className="FormMessage" match="valueMissing">
-                  Please enter your password
-                </Form.Message>
-              </div>
-              <Form.Control asChild>
-                <PasswordToggleField.Root>
-                  <div className="flex h-9 flex-nowrap items-center justify-center gap-2 rounded-sm px-3 pr-2.25 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.1)] focus-within:shadow-[0_0_0_2px_black] hover:shadow-[0_0_0_1px_black]">
-                    <PasswordToggleField.Input
-                      placeholder="Enter your password"
-                      className="h-4.5 flex-1 border-none bg-transparent text-sm leading-none text-inherit outline-none selection:bg-black/20 selection:text-black"
-                    />
-                    <PasswordToggleField.Toggle className="flex aspect-square h-4.5 items-center justify-center rounded text-sm leading-none text-inherit outline-none focus-visible:outline-0 focus-visible:outline-offset-0">
-                      <PasswordToggleField.Icon
-                        visible={<EyeOpenIcon />}
-                        hidden={<EyeClosedIcon />}
-                      />
-                    </PasswordToggleField.Toggle>
-                  </div>
-                </PasswordToggleField.Root>
-              </Form.Control>
-            </Form.Field>
+
             <Form.Submit asChild>
               <div className="w-full">
                 <button className="w-full rounded-full border-2 pt-2 pr-3 pb-2 pl-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,#4FBBC9,#8869D1] hover:text-white">
-                  Login
+                  Submit
                 </button>
               </div>
             </Form.Submit>
             <Form.Field name="Forgot" asChild>
               <Form.Label className="text-sm">
-                <a href="/signup">New User?</a>{" "}
-                <a href="/forgot">Forgot Password?</a>
+                <a href="/login">Take Me Back</a>
               </Form.Label>
             </Form.Field>
           </Form.Root>
