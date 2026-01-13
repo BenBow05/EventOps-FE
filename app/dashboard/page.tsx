@@ -33,13 +33,16 @@ export default function Dashboard() {
             Notifications
           </SegmentedControl.Item>
         </SegmentedControl.Root>
-        <button className="group mr-5 rounded-4xl border-2 p-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,#4FBBC9,#8869D1]">
+        <a
+          className="group mr-5 rounded-4xl border-2 p-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,#4FBBC9,#8869D1]"
+          href="/account"
+        >
           <PersonIcon
             width="30"
             height="30"
             className="transition-colors duration-100 group-hover:text-white"
           />
-        </button>
+        </a>
       </div>
       {/* <hr className="m-auto h-1 w-9/10 rounded-full border-transparent bg-black" /> */}
       <div className="flex h-9/10">
