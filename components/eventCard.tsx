@@ -1,6 +1,6 @@
-import { Pencil1Icon } from "@radix-ui/react-icons";
 import { Card, Inset } from "@radix-ui/themes";
 import ManageGuestsModal from "./manageGuestsModal";
+import CreateEventModal from "./createEventModal";
 
 type cardProps = {
   name: string;
@@ -23,13 +23,12 @@ export default function EventCard(props: cardProps) {
         <p>{props.date.toLocaleDateString()}</p>
         <div className="absolute right-2 bottom-2 flex gap-2">
           <ManageGuestsModal />
-          <button className="group h-12 w-12 rounded-sm border-2 border-black text-6xl transition-all duration-100 hover:scale-110 hover:border-transparent hover:bg-linear-[25deg,var(--primary),var(--secondary)]">
-            <Pencil1Icon
-              className="m-auto transition-all duration-500 group-hover:rotate-360"
-              width="24"
-              height="24"
-            />
-          </button>
+          <CreateEventModal
+            edit={true}
+            name={props.name}
+            desc={props.desc}
+            date={props.date}
+          />
         </div>
       </Card>
     </div>
