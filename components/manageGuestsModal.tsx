@@ -5,7 +5,7 @@ export default function ManageGuestsModal() {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <button className="group h-12 w-12 rounded-sm border-2 border-black text-6xl transition-all duration-100 hover:scale-110 hover:border-transparent hover:bg-linear-[25deg,#4FBBC9,#8869D1]">
+        <button className="group h-12 w-12 rounded-sm border-2 border-black text-6xl transition-all duration-100 hover:scale-110 hover:border-transparent hover:bg-linear-[25deg,var(--primary),var(--secondary)]">
           <PaperPlaneIcon
             className="m-auto transition-all duration-500 group-hover:rotate-360"
             width="24"

@@ -26,7 +26,7 @@ export default function CreateEventModal({
             />
           </button>
         ) : (
-          <button className="group absolute right-5 bottom-5 h-16 w-16 rounded-sm bg-linear-[25deg,#4FBBC9,#8869D1] text-6xl transition-all duration-100 hover:scale-110">
+          <button className="group absolute right-5 bottom-5 h-16 w-16 rounded-sm bg-linear-[25deg,var(--primary),var(--secondary)] text-6xl transition-all duration-100 hover:scale-110">
             <PlusIcon
               className="m-auto transition-all duration-500 group-hover:rotate-180"
               width="45"

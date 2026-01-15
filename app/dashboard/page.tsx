@@ -34,7 +34,7 @@ export default function Dashboard() {
           </SegmentedControl.Item>
         </SegmentedControl.Root>
         <a
-          className="group mr-5 rounded-4xl border-2 p-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,#4FBBC9,#8869D1]"
+          className="group mr-5 rounded-4xl border-2 p-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,var(--primary),var(--secondary)]"
           href="/account"
         >
           <PersonIcon

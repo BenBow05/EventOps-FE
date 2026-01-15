@@ -35,20 +35,20 @@ export default function GettingStarted() {
               ></path>
             </svg>
             <h1 className="ml-5 text-6xl font-bold">
-              <span className="group-hover:bg-linear-[25deg,#4FBBC9,#8869D1] group-hover:bg-clip-text group-hover:text-transparent">
+              <span className="group-hover:bg-linear-[25deg,var(--primary),var(--secondary)] group-hover:bg-clip-text group-hover:text-transparent">
                 Hourglass
               </span>
             </h1>
           </div>
           <div className="mt-5 mr-5 flex gap-5 text-lg text-black">
             <a
-              className="m-auto rounded-full border-2 pt-2 pr-3 pb-2 pl-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,#4FBBC9,#8869D1] hover:text-white"
+              className="m-auto rounded-full border-2 pt-2 pr-3 pb-2 pl-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,var(--primary),var(--secondary)] hover:text-white"
               href="/login"
             >
               Login
             </a>
             <a
-              className="m-auto rounded-full border-2 pt-2 pr-3 pb-2 pl-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,#4FBBC9,#8869D1] hover:text-white"
+              className="m-auto rounded-full border-2 pt-2 pr-3 pb-2 pl-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,var(--primary),var(--secondary)] hover:text-white"
               href="/signup"
             >
               Sign Up
@@ -56,10 +56,10 @@ export default function GettingStarted() {
           </div>
         </div>
         <div className="group col-start-2 row-start-2 row-end-3 m-auto mt-15 text-xl">
-          <span className="group-hover:bg-linear-[25deg,#4FBBC9,#8869D1] group-hover:bg-clip-text group-hover:text-transparent">
+          <span className="group-hover:bg-linear-[25deg,var(--primary),var(--secondary)] group-hover:bg-clip-text group-hover:text-transparent">
             The Ultimate Event Management App.
           </span>
-          <hr className="mt-1 h-1 scale-x-0 rounded-full border-transparent bg-linear-[25deg,#4FBBC9,#8869D1] transition-transform group-hover:scale-x-100" />
+          <hr className="mt-1 h-1 scale-x-0 rounded-full border-transparent bg-linear-[25deg,var(--primary),var(--secondary)] transition-transform group-hover:scale-x-100" />
         </div>
         <div className="group row-start-4 row-end-10 mr-auto ml-auto w-3/4 rounded-sm bg-[#4FBBC9] p-5 text-center shadow-[-10px_10px_0px_0px_#8869D1]">
           <ArrowRightIcon
