@@ -29,7 +29,7 @@ export default function SignUp() {
           ></path>
         </svg>
         <h1 className="ml-5 text-6xl font-bold">
-          <span className="group-hover:bg-linear-[25deg,#4FBBC9,#8869D1] group-hover:bg-clip-text group-hover:text-transparent">
+          <span className="group-hover:bg-linear-[25deg,var(--primary),var(--secondary)] group-hover:bg-clip-text group-hover:text-transparent">
             Hourglass
           </span>
         </h1>
@@ -111,7 +111,7 @@ export default function SignUp() {
             </Form.Field>
             <Form.Submit asChild>
               <div className="w-full">
-                <button className="w-full rounded-full border-2 pt-2 pr-3 pb-2 pl-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,#4FBBC9,#8869D1] hover:text-white">
+                <button className="w-full rounded-full border-2 pt-2 pr-3 pb-2 pl-3 transition-colors duration-100 hover:border-transparent hover:bg-linear-[25deg,var(--primary),var(--secondary)] hover:text-white">
                   Sign Up
                 </button>
               </div>
